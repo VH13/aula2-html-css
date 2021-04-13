@@ -1,0 +1,69 @@
+<!-- Nome: Vitor Herculano RA:01211129
+Atividade de Chart.js 15.04.2021-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=x', initial-scale=1.0">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"
+    integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A=="
+    crossorigin="anonymous"
+  ></script>
+
+    <title>Gráfico - The best 2021</title>
+</head>
+<body style="width: 1000px; height: 1030px;"  >
+    <h1> <u> Votos para escolher o Melhor jogador Do Mundo de 2021</u></h1>
+
+    <!-- Gráfico em estrutura de linhas -->
+    <canvas id="chart" > </canvas>
+</body>
+</html>
+
+<script>
+    var ctx = chart.getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Neymar', 'Mbappé', 'CR7', 'Messi', 'De bruyne', 'Lewandowski'],
+            datasets: [{
+                label: 'Quantidade de votos',
+                data: [19, 17, 7, 8, 2, 5],
+                backgroundColor: [
+                    'purple',
+                ],
+                borderColor: [
+                    'purple',
+                
+                ],
+                borderWidth: [1],
+                pointBackgroundColor: [
+                'red',
+                'blue',
+                'green',
+                'yellow',
+                'cyan',
+                'pink'
+                
+                ],
+                pointBorderColor: [
+                'black'
+                ],
+                pointBorderWidth:[30],
+        }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    </script>
+
+    
